@@ -4,12 +4,6 @@
     <div class="header-top">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 col-sm-6 col-6 header-top-left">
-            <ul>
-              <li><a href="#">Visit Us</a></li>
-              <li><a href="#">Buy Tickets</a></li>
-            </ul>
-          </div>
           <div class="col-lg-6 col-sm-6 col-6 header-top-right">
             <div class="header-social">
               <a href="#"><i class="fa fa-facebook"></i></a>
@@ -29,7 +23,6 @@
         <nav id="nav-menu-container">
           <ul class="nav-menu">
             <li><a href="/">Trang chủ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
             <li><a href="/wifi-quoc-te">Wifi quốc tế</a></li>
             <li><a href="/sim-du-lich">Sim du lịch</a></li>
             <li><a href="/danh-sach-blog">Blog</a></li>

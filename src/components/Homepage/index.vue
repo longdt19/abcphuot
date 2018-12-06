@@ -205,8 +205,8 @@
       <div class="row d-flex justify-content-center">
         <div class="menu-content pb-70 col-lg-9">
           <div class="title text-center">
-            <h1 class="mb-10">Other issues we can help you with</h1>
-            <p>We all live in an age that belongs to the young at heart. Life that is.</p>
+            <h1 class="mb-10">Sim du lịch quốc tế</h1>
+            <!-- <p>We all live in an age that belongs to the young at heart. Life that is.</p> -->
           </div>
         </div>
       </div>
@@ -217,11 +217,8 @@
               <img class="img-fluid" src="/static/img/o1.jpg" alt="">
             </div>
             <a href="#">
-              <h4>Rent a Car</h4>
+              <h4>Sim du lịch Hàn Quốc</h4>
             </a>
-            <p>
-              The preservation of human life is the ultimate value, a pillar of ethics and the foundation.
-            </p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -230,11 +227,8 @@
               <img class="img-fluid" src="/static/img/o2.jpg" alt="">
             </div>
             <a href="#">
-              <h4>Cruise Booking</h4>
+              <h4>Sim du lịch Trung Quốc</h4>
             </a>
-            <p>
-              I was always somebody who felt quite sorry for myself, what I had not got compared.
-            </p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -243,11 +237,8 @@
               <img class="img-fluid" src="/static/img/o3.jpg" alt="">
             </div>
             <a href="#">
-              <h4>To Do List</h4>
+              <h4>Sim du lịch Laos</h4>
             </a>
-            <p>
-              The following article covers a topic that has recently moved to center stage–at least it seems.
-            </p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -256,11 +247,8 @@
               <img class="img-fluid" src="/static/img/o4.jpg" alt="">
             </div>
             <a href="#">
-              <h4>Food Features</h4>
+              <h4>Sim du lịch Campuchia</h4>
             </a>
-            <p>
-              There are many kinds of narratives and organizing principles. Science is driven by evidence.
-            </p>
           </div>
         </div>
       </div>
@@ -274,8 +262,8 @@
       <div class="row d-flex justify-content-center">
         <div class="menu-content pb-60 col-lg-9">
           <div class="title text-center">
-            <h1 class="mb-10">Latest from Our Blog</h1>
-            <p>With the exception of Nietzsche, no other madman has contributed so much to human sanity as has.</p>
+            <h1 class="mb-10">Những bài viết mới nhất của chúng tôi</h1>
+            <p>Những bài viết về trải nghiệm,...</p>
           </div>
         </div>
       </div>
