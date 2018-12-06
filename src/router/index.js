@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Layout from '@/components/Layout'
 import Homepage from '@/components/Homepage'
 import WifiService from '@/components/WifiService'
+import SimService from '@/components/SimService'
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ export default new Router({
           path: 'wifi-quoc-te',
           name: 'WifiService',
           component: WifiService
+        },
+        {
+          path: 'sim-du-lich',
+          name: 'SimService',
+          component: SimService
         }
       ]
     }

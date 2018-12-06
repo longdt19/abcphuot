@@ -44,36 +44,33 @@
                 <span class="fa fa-star"></span>
               </div>
             </h4>
-            <p>
-              View on map | 49 Reviews
-            </p>
             <ul class="package-list">
               <li class="d-flex justify-content-between align-items-center">
-                <span>Swimming pool</span>
-                <span>Yes</span>
+                <span>Mạng quốc tế</span>
+                <span>Name</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Gymnesium</span>
-                <span>No</span>
+                <span>Số máy kết nối</span>
+                <span>5</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Wi-fi</span>
-                <span>Yes</span>
+                <span>Tốc độ download</span>
+                <span>20Mbps</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Room Service</span>
-                <span>No</span>
+                <span>Tốc độ upload</span>
+                <span>7Mbps</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Air Condition</span>
-                <span>Yes</span>
+                <span>Gói cước dữ liệu</span>
+                <span>5000Mb tốc độ 4G, miễn phí tốc độ thấp mỗi ngày</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Restaurant</span>
-                <span>Yes</span>
+                <span>Phí cọc</span>
+                <span>1.200.000d</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Price per night</span>
+                <span>Giá thuê 1 ngày</span>
                 <a href="#" class="price-btn">$250</a>
               </li>
             </ul>
@@ -96,36 +93,33 @@
                 <span class="fa fa-star"></span>
               </div>
             </h4>
-            <p>
-              View on map | 49 Reviews
-            </p>
             <ul class="package-list">
               <li class="d-flex justify-content-between align-items-center">
-                <span>Swimming pool</span>
-                <span>Yes</span>
+                <span>Mạng quốc tế</span>
+                <span>Name</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Gymnesium</span>
-                <span>No</span>
+                <span>Số máy kết nối</span>
+                <span>5</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Wi-fi</span>
-                <span>Yes</span>
+                <span>Tốc độ download</span>
+                <span>20Mbps</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Room Service</span>
-                <span>No</span>
+                <span>Tốc độ upload</span>
+                <span>7Mbps</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Air Condition</span>
-                <span>Yes</span>
+                <span>Gói cước dữ liệu</span>
+                <span>5000Mb tốc độ 4G, miễn phí tốc độ thấp mỗi ngày</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Restaurant</span>
-                <span>Yes</span>
+                <span>Phí cọc</span>
+                <span>1.200.000d</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Price per night</span>
+                <span>Giá thuê 1 ngày</span>
                 <a href="#" class="price-btn">$250</a>
               </li>
             </ul>
@@ -148,36 +142,33 @@
                 <span class="fa fa-star"></span>
               </div>
             </h4>
-            <p>
-              View on map | 49 Reviews
-            </p>
             <ul class="package-list">
               <li class="d-flex justify-content-between align-items-center">
-                <span>Swimming pool</span>
-                <span>Yes</span>
+                <span>Mạng quốc tế</span>
+                <span>Name</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Gymnesium</span>
-                <span>No</span>
+                <span>Số máy kết nối</span>
+                <span>5</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Wi-fi</span>
-                <span>Yes</span>
+                <span>Tốc độ download</span>
+                <span>20Mbps</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Room Service</span>
-                <span>No</span>
+                <span>Tốc độ upload</span>
+                <span>7Mbps</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Air Condition</span>
-                <span>Yes</span>
+                <span>Gói cước dữ liệu</span>
+                <span>5000Mb tốc độ 4G, miễn phí tốc độ thấp mỗi ngày</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Restaurant</span>
-                <span>Yes</span>
+                <span>Phí cọc</span>
+                <span>1.200.000d</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
-                <span>Price per night</span>
+                <span>Giá thuê 1 ngày</span>
                 <a href="#" class="price-btn">$250</a>
               </li>
             </ul>

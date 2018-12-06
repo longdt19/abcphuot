@@ -31,7 +31,7 @@
             <li><a href="/">Trang chủ</a></li>
             <li><a href="#">Giới thiệu</a></li>
             <li><a href="/wifi-quoc-te">Wifi quốc tế</a></li>
-            <li><a href="#">Sim du lịch</a></li>
+            <li><a href="/sim-du-lich">Sim du lịch</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Liên hệ</a></li>
             <li><a href="#">Bảo mật</a></li>
