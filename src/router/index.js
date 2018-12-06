@@ -5,6 +5,8 @@ import Layout from '@/components/Layout'
 import Homepage from '@/components/Homepage'
 import WifiService from '@/components/WifiService'
 import SimService from '@/components/SimService'
+import BlogList from '@/components/Blog/List'
+import BlogDetail from '@/components/Blog/Detail'
 
 Vue.use(Router)
 
@@ -31,6 +33,16 @@ export default new Router({
           path: 'sim-du-lich',
           name: 'SimService',
           component: SimService
+        },
+        {
+          path: 'danh-sach-blog',
+          name: 'BlogList',
+          component: BlogList
+        },
+        {
+          path: 'chi-tiet-blog',
+          name: 'BlogDetail',
+          component: BlogDetail
         }
       ]
     }
