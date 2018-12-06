@@ -4,7 +4,7 @@ import Router from 'vue-router'
 import Layout from '@/components/Layout'
 import Homepage from '@/components/Homepage'
 import WifiService from '@/components/WifiService'
-import SimService from '@/components/SimService'
+import SimServiceList from '@/components/SimService/List'
 import BlogList from '@/components/Blog/List'
 import BlogDetail from '@/components/Blog/Detail'
 
@@ -31,8 +31,8 @@ export default new Router({
         },
         {
           path: 'sim-du-lich',
-          name: 'SimService',
-          component: SimService
+          name: 'SimServiceList',
+          component: SimServiceList
         },
         {
           path: 'danh-sach-blog',
