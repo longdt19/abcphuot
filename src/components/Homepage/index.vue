@@ -424,7 +424,32 @@
 </template>
 
 <script>
-export default {}
+import { SIM_URL } from '@/constants/endpoints'
+
+export default {
+  data () {
+    return {
+      loading: false
+    }
+  },
+  methods: {
+    async load_list () {
+      console.log('1')
+      if (this.loading) return
+      console.log('2')
+      this.loading = true
+      console.log('3')
+      const response = await this.$services.do_request('get', SIM_URL)
+      console.log('4')
+      this.loading = false
+      console.log('response', response)
+    }
+  },
+  created () {
+    console.log('created')
+    this.load_list()
+  }
+}
 </script>
 
 <style lang="css">
