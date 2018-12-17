@@ -1,0 +1,119 @@
+<template>
+<section>
+  <!-- start banner Area -->
+  <section class="relative about-banner">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="about-content col-lg-12">
+          <!-- <h1 class="text-white">
+            Blog Details Page
+          </h1> -->
+          <!-- <p class="text-white link-nav"><a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Blog </a> <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Blog Details Page</a></p> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End banner Area -->
+  <!-- Start post-content Area -->
+  <section class="post-content-area single-post-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 posts-list">
+          <div class="single-post row">
+            <div class="col-lg-12">
+              <div class="feature-img">
+                <img class="img-fluid" src="img/blog/feature-img1.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-lg-5  col-md-5 meta-details">
+              <div class="user-details row">
+                <img :src="sim.image" alt="" style="width: 270px; height: 270px">
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-7">
+              <h3 class="mt-20 mb-20">{{sim.country}}</h3>
+              <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Nhà mạng: </a> <span>{{sim.owned}}</span></p>
+              <p class="date col-lg-12 col-md-12 col-6"><a href="#">Số ngày sử dụng: </a> <span>{{sim.day_used}}</span></p>
+              <p class="view col-lg-12 col-md-12 col-6"><a href="#">Giá: </a> <span>{{sim.price}}</span></p>
+              <ul class="social-links col-lg-12 col-md-12 col-6">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 sidebar-widgets">
+          <div class="widget-wrap">
+            <div class="single-sidebar-widget popular-post-widget">
+
+              <div class="popular-post-list">
+                <div class="single-post-list d-flex flex-row align-items-center">
+                  <div class="thumb">
+                    <img class="img-fluid" src="img/blog/pp1.jpg" alt="">
+                  </div>
+                  <div class="details">
+                    <a href="blog-single.html">
+                      <h6>Số lượng cần mua</h6>
+                    </a>
+                    <el-input type="number" v-model="quantity" min="1"></el-input>
+                  </div>
+                </div>
+                <h5 style="margin-bottom: 80px; background: #759c15" type="button" class="popular-title" @click="test()">Thêm vào giỏ hàng</h5>
+                <h4 type="button" class="popular-title" @click="test()">Mua ngay</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End post-content Area -->
+</section>
+</template>
+
+<script>
+import { GET_SIM_URL } from '@/constants/endpoints'
+
+export default {
+  data () {
+    return {
+      quantity: 1,
+      sim_id: '',
+      loading: false,
+      sim: {}
+    }
+  },
+  watch: {
+  },
+  methods: {
+    test () {
+      console.log('test', this.quantity)
+    },
+    async get_sim () {
+      if (this.loading) return
+      this.loading = true
+      const data = {
+        'product_id': this.sim_id
+      }
+      const response = await this.$services.do_request('post', GET_SIM_URL, data)
+      this.loading = false
+      if (response.status === 200) {
+        this.sim = response.data
+      } else {
+        console.log('load sim list failed')
+      }
+    }
+  },
+  created () {
+    this.sim_id = this.$route.params.id
+    this.get_sim()
+  }
+}
+</script>
+
+<style lang="css">
+</style>

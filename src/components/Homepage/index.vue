@@ -33,64 +33,8 @@
     </div>
   </section>
 
-  <!-- Start popular-destination Area -->
-  <!-- <section class="popular-destination-area section-gap">
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="menu-content pb-70 col-lg-8">
-          <div class="title text-center">
-            <h1 class="mb-10">Popular Destinations</h1>
-            <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="single-destination relative">
-            <div class="thumb relative">
-              <div class="overlay overlay-bg"></div>
-              <img class="img-fluid" src="/static/img/d1.jpg" alt="">
-            </div>
-            <div class="desc">
-              <a href="#" class="price-btn">$150</a>
-              <h4>Mountain River</h4>
-              <p>Paraguay</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="single-destination relative">
-            <div class="thumb relative">
-              <div class="overlay overlay-bg"></div>
-              <img class="img-fluid" src="/static/img/d2.jpg" alt="">
-            </div>
-            <div class="desc">
-              <a href="#" class="price-btn">$250</a>
-              <h4>Dream City</h4>
-              <p>Paris</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="single-destination relative">
-            <div class="thumb relative">
-              <div class="overlay overlay-bg"></div>
-              <img class="img-fluid" src="/static/img/d3.jpg" alt="">
-            </div>
-            <div class="desc">
-              <a href="#" class="price-btn">$350</a>
-              <h4>Cloud Mountain</h4>
-              <p>Sri Lanka</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- End popular-destination Area -->
-
   <!-- Start price Area -->
-  <section class="price-area section-gap">
+  <section class="price-area section-gap" v-loading="wifi.loading">
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="menu-content pb-70 col-lg-8">
@@ -105,60 +49,25 @@
           <div class="single-price">
             <h4>Châu Á</h4>
             <ul class="price-list">
-              <li class="d-flex justify-content-between align-items-center">
-                <span>New York</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Maldives</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Sri Lanka</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Nepal</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Thiland</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Singapore</span>
-                <a href="#" class="price-btn">$1500</a>
+              <li class="d-flex justify-content-between align-items-center"
+                v-for="(wifi, index) in wifi.list.asian" v-bind:key="index"
+              >
+                <span>{{wifi.country}}</span>
+                <a :href=" '/chi-tiet-wifi/' + wifi.id" class="price-btn">{{wifi.price_day}}đ</a>
               </li>
             </ul>
           </div>
+
         </div>
         <div class="col-lg-4">
           <div class="single-price">
             <h4>Châu Âu</h4>
             <ul class="price-list">
-              <li class="d-flex justify-content-between align-items-center">
-                <span>New York</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Maldives</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Sri Lanka</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Nepal</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Thiland</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Singapore</span>
-                <a href="#" class="price-btn">$1500</a>
+              <li class="d-flex justify-content-between align-items-center"
+                v-for="(wifi, index) in wifi.list.eroupe" v-bind:key="index"
+              >
+                <span>{{wifi.country}}</span>
+                <a :href=" '/chi-tiet-wifi/' + wifi.id" class="price-btn">{{wifi.price_day}}đ</a>
               </li>
             </ul>
           </div>
@@ -167,29 +76,11 @@
           <div class="single-price">
             <h4>Khác</h4>
             <ul class="price-list">
-              <li class="d-flex justify-content-between align-items-center">
-                <span>New York</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Maldives</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Sri Lanka</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Nepal</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Thiland</span>
-                <a href="#" class="price-btn">$1500</a>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Singapore</span>
-                <a href="#" class="price-btn">$1500</a>
+              <li class="d-flex justify-content-between align-items-center"
+                v-for="(wifi, index) in wifi.list.other" v-bind:key="index"
+              >
+                <span>{{wifi.country}}</span>
+                <a :href=" '/chi-tiet-wifi/' + wifi.id" class="price-btn">{{wifi.price_day}}đ</a>
               </li>
             </ul>
           </div>
@@ -211,43 +102,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" v-for="(sim, index) in sim.list" v-bind:key="index">
           <div class="single-other-issue">
             <div class="thumb">
-              <img class="img-fluid" src="/static/img/o1.jpg" alt="">
+              <img class="img-fluid" :src="sim.image" style="width: 250px; height: 180px;">
             </div>
-            <a href="#">
-              <h4>Sim du lịch Hàn Quốc</h4>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="single-other-issue">
-            <div class="thumb">
-              <img class="img-fluid" src="/static/img/o2.jpg" alt="">
-            </div>
-            <a href="#">
-              <h4>Sim du lịch Trung Quốc</h4>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="single-other-issue">
-            <div class="thumb">
-              <img class="img-fluid" src="/static/img/o3.jpg" alt="">
-            </div>
-            <a href="#">
-              <h4>Sim du lịch Laos</h4>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="single-other-issue">
-            <div class="thumb">
-              <img class="img-fluid" src="/static/img/o4.jpg" alt="">
-            </div>
-            <a href="#">
-              <h4>Sim du lịch Campuchia</h4>
+            <a :href=" '/chi-tiet-sim/' + sim.id">
+              <h4>{{sim.country}}</h4>
             </a>
           </div>
         </div>
@@ -269,151 +130,31 @@
       </div>
       <div class="row">
         <div class="active-recent-blog-carusel">
-          <div class="single-recent-blog-post item">
-            <div class="thumb">
-              <img class="img-fluid" src="/static/img/b1.jpg" alt="">
-            </div>
-            <div class="details">
-              <div class="tags">
-                <ul>
-                  <li>
-                    <a href="#">Travel</a>
-                  </li>
-                  <li>
-                    <a href="#">Life Style</a>
-                  </li>
-                </ul>
-              </div>
-              <a href="#">
-                <h4 class="title">Low Cost Advertising</h4>
-              </a>
-              <p>
-                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-              </p>
-              <h6 class="date">31st January,2018</h6>
-            </div>
-          </div>
-          <div class="single-recent-blog-post item">
-            <div class="thumb">
-              <img class="img-fluid" src="/static/img/b2.jpg" alt="">
-            </div>
-            <div class="details">
-              <div class="tags">
-                <ul>
-                  <li>
-                    <a href="#">Travel</a>
-                  </li>
-                  <li>
-                    <a href="#">Life Style</a>
-                  </li>
-                </ul>
-              </div>
-              <a href="#">
-                <h4 class="title">Creative Outdoor Ads</h4>
-              </a>
-              <p>
-                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-              </p>
-              <h6 class="date">31st January,2018</h6>
-            </div>
-          </div>
-          <div class="single-recent-blog-post item">
-            <div class="thumb">
-              <img class="img-fluid" src="/static/img/b3.jpg" alt="">
-            </div>
-            <div class="details">
-              <div class="tags">
-                <ul>
-                  <li>
-                    <a href="#">Travel</a>
-                  </li>
-                  <li>
-                    <a href="#">Life Style</a>
-                  </li>
-                </ul>
-              </div>
-              <a href="#">
-                <h4 class="title">It's Classified How To Utilize Free</h4>
-              </a>
-              <p>
-                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-              </p>
-              <h6 class="date">31st January,2018</h6>
-            </div>
-          </div>
-          <div class="single-recent-blog-post item">
-            <div class="thumb">
-              <img class="img-fluid" src="/static/img/b1.jpg" alt="">
-            </div>
-            <div class="details">
-              <div class="tags">
-                <ul>
-                  <li>
-                    <a href="#">Travel</a>
-                  </li>
-                  <li>
-                    <a href="#">Life Style</a>
-                  </li>
-                </ul>
-              </div>
-              <a href="#">
-                <h4 class="title">Low Cost Advertising</h4>
-              </a>
-              <p>
-                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-              </p>
-              <h6 class="date">31st January,2018</h6>
-            </div>
-          </div>
-          <div class="single-recent-blog-post item">
-            <div class="thumb">
-              <img class="img-fluid" src="/static/img/b2.jpg" alt="">
-            </div>
-            <div class="details">
-              <div class="tags">
-                <ul>
-                  <li>
-                    <a href="#">Travel</a>
-                  </li>
-                  <li>
-                    <a href="#">Life Style</a>
-                  </li>
-                </ul>
-              </div>
-              <a href="#">
-                <h4 class="title">Creative Outdoor Ads</h4>
-              </a>
-              <p>
-                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-              </p>
-              <h6 class="date">31st January,2018</h6>
-            </div>
-          </div>
-          <div class="single-recent-blog-post item">
-            <div class="thumb">
-              <img class="img-fluid" src="/static/img/b3.jpg" alt="">
-            </div>
-            <div class="details">
-              <div class="tags">
-                <ul>
-                  <li>
-                    <a href="#">Travel</a>
-                  </li>
-                  <li>
-                    <a href="#">Life Style</a>
-                  </li>
-                </ul>
-              </div>
-              <a href="#">
-                <h4 class="title">It's Classified How To Utilize Free</h4>
-              </a>
-              <p>
-                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-              </p>
-              <h6 class="date">31st January,2018</h6>
-            </div>
-          </div>
 
+          <div class="single-recent-blog-post item" v-for="(blog, index) in blog.list" v-bind:key="index"
+          >
+            <div class="owl-item active" style="width: 360px; margin-right: 30px;">
+              <div class="thumb">
+                <img class="img-fluid" :src="blog.banner_url" alt="" style="width: 250px; height: 250px">
+              </div>
+              <div class="details">
+                <div class="tags">
+                  <ul>
+                    <li>
+                      <a href="#">{{blog.category_id}}</a>
+                    </li>
+                  </ul>
+                </div>
+                <a href="#">
+                  <h4 class="title">{{blog.title}}</h4>
+                </a>
+                <p>
+                  something
+                </p>
+                <h6 class="date">31st January,2018</h6>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -424,30 +165,87 @@
 </template>
 
 <script>
-import { SIM_URL } from '@/constants/endpoints'
+import { SIM_URL, WIFI_URL, BLOG_LIST_URL } from '@/constants/endpoints'
 
 export default {
   data () {
     return {
-      loading: false
+      wifi: {
+        list: {
+          asian: [],
+          eroupe: [],
+          other: []
+        },
+        loading: false
+      },
+      sim: {
+        list: [],
+        loading: false
+      },
+      blog: {
+        list: [],
+        loading: false
+      }
     }
   },
   methods: {
-    async load_list () {
-      console.log('1')
-      if (this.loading) return
-      console.log('2')
-      this.loading = true
-      console.log('3')
+    async get_sim_list () {
+      if (this.sim.loading) return
+      this.sim.loading = true
       const response = await this.$services.do_request('get', SIM_URL)
-      console.log('4')
-      this.loading = false
+      this.sim.loading = false
+      if (response.status === 200) {
+        this.sim.list = response.data.result
+      } else {
+        console.log('load sim list failed')
+      }
+    },
+    async get_wifi_list () {
+      if (this.wifi.loading) return
+      this.wifi.loading = true
+      const response = await this.$services.do_request('get', WIFI_URL)
+      this.wifi.loading = false
+
+      if (response.status === 200) {
+        let result = response.data.result
+
+        result.forEach(item => {
+          if (item.continent === 'asian') {
+            this.wifi.list.asian.push(item)
+          } else if (item.continent === 'eroupe') {
+            this.wifi.list.eroupe.push(item)
+          } else {
+            this.wifi.list.other.push(item)
+          }
+        })
+      } else {
+        console.log('load wifi list failed')
+      }
+    },
+    async get_blog_list () {
+      if (this.blog.loading) return
+      this.blog.loading = true
+      const response = await this.$services.do_request('get', BLOG_LIST_URL)
       console.log('response', response)
+      this.blog.loading = false
+
+      if (response.status === 200) {
+        this.blog.list = response.data.result
+      } else {
+        console.log('load blog list failed')
+      }
+    },
+    go_detail_wifi (id) {
+      this.$router.push('/chi-tiet-wifi/' + id)
+    },
+    go_detail_sim (id) {
+      this.$router.push('/chi-tiet-sim/' + id)
     }
   },
   created () {
-    console.log('created')
-    this.load_list()
+    this.get_sim_list()
+    this.get_wifi_list()
+    this.get_blog_list()
   }
 }
 </script>

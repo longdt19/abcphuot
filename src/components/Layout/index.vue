@@ -18,7 +18,7 @@
     <div class="container main-menu">
       <div class="row align-items-center justify-content-between d-flex">
         <div id="logo">
-          <a href="index.html"><img src="/static/img/logo.png" style="width: 170px" alt="" title="" /></a>
+          <a href="/trang-chu"><img src="/static/img/logo.png" style="width: 170px" alt="" title="" /></a>
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
@@ -28,6 +28,7 @@
             <li><a href="/danh-sach-blog">Blog</a></li>
             <li><a href="#">Liên hệ</a></li>
             <li><a href="#">Bảo mật</a></li>
+            <li><a href="/gio-hang">Giỏ hàng</a></li>
           </ul>
         </nav><!-- #nav-menu-container -->
       </div>
