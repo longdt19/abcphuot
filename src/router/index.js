@@ -47,7 +47,7 @@ export default new Router({
           component: BlogList
         },
         {
-          path: 'chi-tiet-blog',
+          path: 'chi-tiet-blog/:id',
           name: 'BlogDetail',
           component: BlogDetail
         },

@@ -131,9 +131,10 @@
       <div class="row">
         <div class="active-recent-blog-carusel">
 
-          <div class="single-recent-blog-post item" v-for="(blog, index) in blog.list" v-bind:key="index"
+          <div class="single-recent-blog-post item"
+            v-for="(blog, index) in blog.list" v-bind:key="index"
           >
-            <div class="owl-item active" style="width: 360px; margin-right: 30px;">
+            <div class="owl-item active" style="width: 360px; margin-right: 10px;">
               <div class="thumb">
                 <img class="img-fluid" :src="blog.banner_url" alt="" style="width: 250px; height: 250px">
               </div>
@@ -145,8 +146,8 @@
                     </li>
                   </ul>
                 </div>
-                <a href="#">
-                  <h4 class="title">{{blog.title}}</h4>
+                <a :href="'/chi-tiet-blog/' + blog.id">
+                  <h4 class="title">{{blog.name}}</h4>
                 </a>
                 <p>
                   something
@@ -230,7 +231,18 @@ export default {
       this.blog.loading = false
 
       if (response.status === 200) {
-        this.blog.list = response.data.result
+        this.blog.list = response.data.result.slice(0, 6)
+        // if (response.data.result.length > 6) {
+        //   let i = 0
+        //   for (i = 0; i < 6; i++) {
+        //     console.log('i', i)
+        //     this.blog.list.unshift(response.data.result[i])
+        //   }
+        // } else {
+        //   this.blog.list = response.data.result
+        // }
+        // this.blog.list = response.data.result
+        console.log('blog list', this.blog.list)
       } else {
         console.log('load blog list failed')
       }

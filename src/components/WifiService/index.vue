@@ -28,148 +28,44 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4">
+
+      <div class="col-lg-4" v-for="(wifi, index) in wifi.list" v-bind:key="index">
         <div class="single-destinations">
           <div class="thumb">
             <img src="/static/img/hotels/d1.jpg" alt="">
           </div>
           <div class="details">
             <h4 class="d-flex justify-content-between">
-              <span>Philipin</span>
-              <div class="star">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-              </div>
+              <span>{{wifi.country}}</span>
             </h4>
             <ul class="package-list">
               <li class="d-flex justify-content-between align-items-center">
                 <span>Mạng quốc tế</span>
-                <span>Name</span>
+                <span>{{wifi.internet_name}}</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
                 <span>Số máy kết nối</span>
-                <span>5</span>
+                <span>{{wifi.connection}}</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
                 <span>Tốc độ download</span>
-                <span>20Mbps</span>
+                <span>{{wifi.speed_download}}</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
                 <span>Tốc độ upload</span>
-                <span>7Mbps</span>
+                <span>{{wifi.speed_upload}}</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
                 <span>Gói cước dữ liệu</span>
-                <span>5000Mb tốc độ 4G, miễn phí tốc độ thấp mỗi ngày</span>
+                <span>{{wifi.infomation}}</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
                 <span>Phí cọc</span>
-                <span>1.200.000d</span>
+                <span>{{wifi.prepayment}}</span>
               </li>
               <li class="d-flex justify-content-between align-items-center">
                 <span>Giá thuê 1 ngày</span>
-                <a href="#" class="price-btn">$250</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-destinations">
-          <div class="thumb">
-            <img src="/static/img/hotels/d2.jpg" alt="">
-          </div>
-          <div class="details">
-            <h4 class="d-flex justify-content-between">
-              <span>Hàn Quốc</span>
-              <div class="star">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-              </div>
-            </h4>
-            <ul class="package-list">
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Mạng quốc tế</span>
-                <span>Name</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Số máy kết nối</span>
-                <span>5</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Tốc độ download</span>
-                <span>20Mbps</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Tốc độ upload</span>
-                <span>7Mbps</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Gói cước dữ liệu</span>
-                <span>5000Mb tốc độ 4G, miễn phí tốc độ thấp mỗi ngày</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Phí cọc</span>
-                <span>1.200.000d</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Giá thuê 1 ngày</span>
-                <a href="#" class="price-btn">$250</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-destinations">
-          <div class="thumb">
-            <img src="/static/img/hotels/d3.jpg" alt="">
-          </div>
-          <div class="details">
-            <h4 class="d-flex justify-content-between">
-              <span>Trung Quốc</span>
-              <div class="star">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-              </div>
-            </h4>
-            <ul class="package-list">
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Mạng quốc tế</span>
-                <span>Name</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Số máy kết nối</span>
-                <span>5</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Tốc độ download</span>
-                <span>20Mbps</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Tốc độ upload</span>
-                <span>7Mbps</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Gói cước dữ liệu</span>
-                <span>5000Mb tốc độ 4G, miễn phí tốc độ thấp mỗi ngày</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Phí cọc</span>
-                <span>1.200.000d</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Giá thuê 1 ngày</span>
-                <a href="#" class="price-btn">$250</a>
+                <a :href="'/chi-tiet-wifi/' + wifi.id" class="price-btn">{{wifi.price_day}}d</a>
               </li>
             </ul>
           </div>
@@ -183,7 +79,39 @@
 </template>
 
 <script>
-export default {}
+import { WIFI_URL } from '@/constants/endpoints'
+
+export default {
+  data () {
+    return {
+      wifi: {
+        list: {
+          asian: [],
+          eroupe: [],
+          other: []
+        },
+        loading: false
+      }
+    }
+  },
+  methods: {
+    async get_wifi_list () {
+      if (this.wifi.loading) return
+      this.wifi.loading = true
+      const response = await this.$services.do_request('get', WIFI_URL)
+      this.wifi.loading = false
+
+      if (response.status === 200) {
+        this.wifi.list = response.data.result
+      } else {
+        console.log('load wifi list failed')
+      }
+    }
+  },
+  created () {
+    this.get_wifi_list()
+  }
+}
 </script>
 
 <style lang="css">

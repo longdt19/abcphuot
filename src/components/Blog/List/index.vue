@@ -32,7 +32,7 @@
                   <img class="content-image img-fluid d-block mx-auto" src="/static/img/blog/cat-widget1.jpg" alt="">
                 </div>
                 <div class="content-details">
-                  <h4 class="content-title mx-auto text-uppercase">Social life</h4>
+                  <h4 class="content-title mx-auto text-uppercase">Kinh nghiệm</h4>
                   <span></span>
                   <p>Enjoy your social life together</p>
                 </div>
@@ -49,7 +49,7 @@
                   <img class="content-image img-fluid d-block mx-auto" src="/static/img/blog/cat-widget2.jpg" alt="">
                 </div>
                 <div class="content-details">
-                  <h4 class="content-title mx-auto text-uppercase">Politics</h4>
+                  <h4 class="content-title mx-auto text-uppercase">Cảm nhận</h4>
                   <span></span>
                   <p>Be a part of politics</p>
                 </div>
@@ -66,7 +66,7 @@
                   <img class="content-image img-fluid d-block mx-auto" src="/static/img/blog/cat-widget3.jpg" alt="">
                 </div>
                 <div class="content-details">
-                  <h4 class="content-title mx-auto text-uppercase">Food</h4>
+                  <h4 class="content-title mx-auto text-uppercase">Địa điểm</h4>
                   <span></span>
                   <p>Let the food be finished</p>
                 </div>
@@ -84,13 +84,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 posts-list">
-          <div class="single-post row">
+          <div class="single-post row" v-for="(blog, index) in blog_list" v-bind:key="index">
             <div class="col-lg-3  col-md-3 meta-details">
               <ul class="tags">
-                <li><a href="#">Food,</a></li>
-                <li><a href="#">Technology,</a></li>
-                <li><a href="#">Politics,</a></li>
-                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">{{blog.category_id}}</a></li>
               </ul>
               <div class="user-details row">
                 <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
@@ -101,10 +98,10 @@
             </div>
             <div class="col-lg-9 col-md-9 ">
               <div class="feature-img">
-                <img class="img-fluid" src="/static/img/blog/feature-img1.jpg" alt="">
+                <img class="img-fluid" :src="blog.banner_url" style="width: 550px; height:320px" alt="">
               </div>
-              <a class="posts-title" href="blog-single.html">
-                <h3>Astronomy Binoculars A Great Alternative</h3>
+              <a class="posts-title" href="#">
+                <h3>{{blog.name}}</h3>
               </a>
               <p class="excert">
                 MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
@@ -112,118 +109,7 @@
               <a href="/chi-tiet-blog" class="primary-btn">View More</a>
             </div>
           </div>
-          <div class="single-post row">
-            <div class="col-lg-3  col-md-3 meta-details">
-              <ul class="tags">
-                <li><a href="#">Food,</a></li>
-                <li><a href="#">Technology,</a></li>
-                <li><a href="#">Politics,</a></li>
-                <li><a href="#">Lifestyle</a></li>
-              </ul>
-              <div class="user-details row">
-                <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-                <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-                <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-                <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>
-              </div>
-            </div>
-            <div class="col-lg-9 col-md-9 ">
-              <div class="feature-img">
-                <img class="img-fluid" src="/static/img/blog/feature-img2.jpg" alt="">
-              </div>
-              <a class="posts-title" href="blog-single.html">
-                <h3>The Basics Of Buying A Telescope</h3>
-              </a>
-              <p class="excert">
-                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-              </p>
-              <a href="/chi-tiet-blog" class="primary-btn">View More</a>
-            </div>
-          </div>
-          <div class="single-post row">
-            <div class="col-lg-3  col-md-3 meta-details">
-              <ul class="tags">
-                <li><a href="#">Food,</a></li>
-                <li><a href="#">Technology,</a></li>
-                <li><a href="#">Politics,</a></li>
-                <li><a href="#">Lifestyle</a></li>
-              </ul>
-              <div class="user-details row">
-                <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-                <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-                <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-                <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>
-              </div>
-            </div>
-            <div class="col-lg-9 col-md-9">
-              <div class="feature-img">
-                <img class="img-fluid" src="/static/img/blog/feature-img3.jpg" alt="">
-              </div>
-              <a class="posts-title" href="blog-single.html">
-                <h3>The Glossary Of Telescopes</h3>
-              </a>
-              <p class="excert">
-                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-              </p>
-              <a href="/chi-tiet-blog" class="primary-btn">View More</a>
-            </div>
-          </div>
-          <div class="single-post row">
-            <div class="col-lg-3  col-md-3 meta-details">
-              <ul class="tags">
-                <li><a href="#">Food,</a></li>
-                <li><a href="#">Technology,</a></li>
-                <li><a href="#">Politics,</a></li>
-                <li><a href="#">Lifestyle</a></li>
-              </ul>
-              <div class="user-details row">
-                <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-                <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-                <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-                <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>
-              </div>
-            </div>
-            <div class="col-lg-9 col-md-9">
-              <div class="feature-img">
-                <img class="img-fluid" src="/static/img/blog/feature-img4.jpg" alt="">
-              </div>
-              <a class="posts-title" href="blog-single.html">
-                <h3>The Night Sky</h3>
-              </a>
-              <p class="excert">
-                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-              </p>
-              <a href="/chi-tiet-blog" class="primary-btn">View More</a>
-            </div>
-          </div>
-          <div class="single-post row">
-            <div class="col-lg-3 col-md-3 meta-details">
-              <ul class="tags">
-                <li><a href="#">Food,</a></li>
-                <li><a href="#">Technology,</a></li>
-                <li><a href="#">Politics,</a></li>
-                <li><a href="#">Lifestyle</a></li>
-              </ul>
-              <div class="user-details row">
-                <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-                <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-                <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-                <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>
-              </div>
-            </div>
-            <div class="col-lg-9 col-md-9">
-              <div class="feature-img">
-                <img class="img-fluid" src="/static/img/blog/feature-img5.jpg" alt="">
-              </div>
-              <a class="posts-title" href="blog-single.html">
-                <h3>Telescopes 101</h3>
-              </a>
-              <p class="excert">
-                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-              </p>
-              <a href="/chi-tiet-blog" class="primary-btn">View More</a>
-            </div>
-          </div>
+
           <nav class="blog-pagination justify-content-center d-flex">
             <ul class="pagination">
               <li class="page-item">
@@ -259,6 +145,21 @@
             <div class="single-sidebar-widget popular-post-widget">
               <h4 class="popular-title">Popular Posts</h4>
               <div class="popular-post-list">
+
+                <div class="single-post-list d-flex flex-row align-items-center"
+                  v-for="(blog, index) in blog_list_random" v-bind:key="index"
+                >
+                  <div class="thumb">
+                    <img class="img-fluid" :src="blog.banner_url" style="width: 100px" alt="">
+                  </div>
+                  <div class="details">
+                    <a :href="'/chi-tiet-blog/' + blog.id">
+                      <h6>{{blog.name}}</h6>
+                    </a>
+                    <p>{{formatDate(blog.created_at)}}</p>
+                  </div>
+                </div>
+
                 <div class="single-post-list d-flex flex-row align-items-center">
                   <div class="thumb">
                     <img class="img-fluid" src="/static/img/blog/pp1.jpg" alt="">
@@ -310,44 +211,20 @@
               <ul class="cat-list">
                 <li>
                   <a href="#" class="d-flex justify-content-between">
-                    <p>Technology</p>
+                    <p>Kinh nghiệm</p>
                     <p>37</p>
                   </a>
                 </li>
                 <li>
                   <a href="#" class="d-flex justify-content-between">
-                    <p>Lifestyle</p>
+                    <p>Cảm nhận</p>
                     <p>24</p>
                   </a>
                 </li>
                 <li>
                   <a href="#" class="d-flex justify-content-between">
-                    <p>Fashion</p>
+                    <p>Địa điểm</p>
                     <p>59</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Art</p>
-                    <p>29</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Food</p>
-                    <p>15</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Architecture</p>
-                    <p>09</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex justify-content-between">
-                    <p>Adventure</p>
-                    <p>44</p>
                   </a>
                 </li>
               </ul>
@@ -401,7 +278,54 @@
 </template>
 
 <script>
-export default {}
+import { BLOG_LIST_URL } from '@/constants/endpoints'
+import formatDate from '@/utils/formatDate'
+
+export default {
+  data () {
+    return {
+      blog_list: [],
+      loading: false,
+      blog_list_random: []
+    }
+  },
+  methods: {
+    formatDate,
+    async get_blog_list () {
+      if (this.loading) return
+      this.loading = true
+      const response = await this.$services.do_request('get', BLOG_LIST_URL)
+      console.log('response', response)
+      this.loading = false
+
+      if (response.status === 200) {
+        this.blog_list = response.data.result
+        this.blog_list_random = this.shuffle(this.blog_list)
+        console.log('randome', this.blog_list_random)
+      } else {
+        console.log('load blog list failed')
+      }
+    },
+    shuffle (array) {
+      var currentIndex = array.length
+      var temporaryValue = null
+      var randomIndex = null
+
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex)
+        currentIndex -= 1
+        temporaryValue = array[currentIndex]
+        array[currentIndex] = array[randomIndex]
+        array[randomIndex] = temporaryValue
+      }
+
+      return array
+    }
+  },
+  created () {
+    this.get_blog_list()
+  }
+}
 </script>
 
 <style lang="css">
